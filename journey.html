@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Start Your Journey | Join the Mindful Money Community</title>
+    <meta name="description" content="Join our private community for behavioral finance insights, exclusive tools, and a supportive path to financial independence.">
+    <meta name="keywords" content="financial independence community, behavioral finance, money mindset, wealth building community">
+    <meta name="author" content="Mindful Money">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Start Your Journey | Mindful Money">
+    <meta property="og:description" content="Join our private community for behavioral finance insights and exclusive tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindfulmoney.com/journey.html">
+    <meta property="og:image" content="./og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Start Your Journey | Mindful Money">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-sage text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Universal Navigation -->
+    <nav id="main-nav" class="p-6 flex justify-between items-center max-w-6xl mx-auto w-full" role="banner" aria-label="Site navigation">
+        <!-- Navigation injected by nav.js -->
+    </nav>
+
+    <!-- Content Section -->
+    <main id="main-content" class="flex-1 flex items-center justify-center px-6 py-12">
+        <div class="max-w-xl w-full">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl text-forest mb-4 leading-tight">
+                    Start Your Journey to Financial Peace.
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Join our private community for behavioral finance insights and exclusive tools.
+                </p>
+            </header>
+
+            <!-- Lead Capture Form Card -->
+            <div class="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/50 shadow-2xl">
+                <form
+                    id="waitlist-form"
+                    action="https://formspree.io/f/mzdyejer"
+                    method="POST"
+                    class="space-y-6"
+                    aria-label="Waitlist signup form"
+                >
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <!-- Success redirect -->
+                    <input type="hidden" name="_next" value="https://mindfulmoney.com/journey.html?success=true">
+
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Full Name <span aria-label="required">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Jane Doe"
+                            autocomplete="name"
+                            class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-forest/20 focus:border-forest transition"
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Email Address <span aria-label="required">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="jane@example.com"
+                            autocomplete="email"
+                            class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-forest/20 focus:border-forest transition"
+                            aria-required="true"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Please enter a valid email address"
+                        >
+                    </div>
+
+                    <!-- Consent checkbox -->
+                    <div class="flex items-start">
+                        <input
+                            type="checkbox"
+                            id="consent"
+                            name="consent"
+                            required
+                            class="mt-1 mr-3 w-4 h-4 text-forest focus:ring-forest"
+                            aria-required="true"
+                        >
+                        <label for="consent" class="text-sm text-gray-600">
+                            I agree to receive emails from Mindful Money. You can unsubscribe at any time. <span aria-label="required">*</span>
+                        </label>
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="submit-btn"
+                        class="btn-forest w-full py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-opacity-90 transition transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label="Join the waitlist"
+                    >
+                        <span id="btn-text">Join the Waitlist</span>
+                        <span id="btn-loading" class="hidden">Sending...</span>
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="success-message" class="hidden mt-6 text-center" role="alert" aria-live="polite">
+                    <div class="text-forest text-5xl mb-4" aria-hidden="true">🎉</div>
+                    <h3 class="text-xl font-bold text-forest mb-2">You're on the list!</h3>
+                    <p class="text-gray-600">Check your inbox for a welcome email. We'll be in touch soon.</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="error-message" class="hidden mt-6 p-4 bg-red-50 border border-red-200 rounded-lg text-center" role="alert" aria-live="assertive">
+                    <p class="text-red-700">Something went wrong. Please try again or contact us directly.</p>
+                </div>
+
+                <p class="mt-6 text-center text-xs text-gray-500">
+                    We value your privacy. No spam, ever. Just high-signal wisdom.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Space -->
+    <footer class="py-10 text-center text-sm text-gray-400" role="contentinfo">
+        <p>&copy; 2026 Mindful Money. Built on Temperament.</p>
+    </footer>
+
+    <script>
+        // Handle form submission
+        const form = document.getElementById('waitlist-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnLoading = document.getElementById('btn-loading');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+
+        // Check for success parameter in URL (Formspree redirect)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            form.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        }
+
+        form.addEventListener('submit', async function(e) {
+            // Show loading state while form submits to Formspree
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+        });
+    </script>
+
+    <script src="nav.js"></script>
+</body>
+</html>

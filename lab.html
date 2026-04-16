@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>The Behavioral Lab | Discover Your Money Psychology | Mindful Money</title>
+    <meta name="description" content="Take our behavioral finance quiz to discover your money psychology. Are you a Mindful Compounder, a Balanced Navigator, or a Steady Protector?">
+    <meta name="keywords" content="money psychology quiz, behavioral finance test, financial personality, money vibe">
+    <meta name="author" content="Mindful Money">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="The Behavioral Lab | Mindful Money">
+    <meta property="og:description" content="Discover your money psychology with our interactive quiz.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindfulmoney.com/lab.html">
+    <meta property="og:image" content="./og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Behavioral Lab | Mindful Money">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-sage text-gray-800 min-h-screen">
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Universal Navigation -->
+    <nav id="main-nav" class="p-6 flex justify-between items-center max-w-6xl mx-auto w-full" role="banner" aria-label="Site navigation">
+        <!-- Navigation injected by nav.js -->
+    </nav>
+
+    <!-- Header Section -->
+    <header class="max-w-4xl mx-auto text-center py-16 px-6">
+        <h1 class="text-5xl md:text-6xl text-forest mb-4 leading-tight">
+            The Behavioral Lab
+        </h1>
+        <p class="text-xl text-gray-600">
+            Discover your money psychology.
+        </p>
+    </header>
+
+    <!-- Quiz Section -->
+    <main id="main-content" class="max-w-3xl mx-auto px-6 pb-24">
+        <div class="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-sm border border-white/50">
+
+            <form id="quiz-form" class="space-y-10" aria-label="Money Psychology Quiz">
+                <!-- Question 1 -->
+                <fieldset class="space-y-4 border-0 p-0">
+                    <legend class="text-lg font-semibold text-forest mb-4">1. When the stock market drops 10%, you feel:</legend>
+                    <div class="space-y-3" role="radiogroup" aria-labelledby="q1-label">
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition" id="q1-option-a">
+                            <input type="radio" name="q1" value="aggressive" class="w-4 h-4" required aria-describedby="q1-desc-a">
+                            <span id="q1-desc-a" class="group-hover:text-forest transition">Excited for a discount</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition" id="q1-option-b">
+                            <input type="radio" name="q1" value="balanced" class="w-4 h-4" aria-describedby="q1-desc-b">
+                            <span id="q1-desc-b" class="group-hover:text-forest transition">Anxious but hold</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition" id="q1-option-c">
+                            <input type="radio" name="q1" value="conservative" class="w-4 h-4" aria-describedby="q1-desc-c">
+                            <span id="q1-desc-c" class="group-hover:text-forest transition">Terrified and want to sell</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Question 2 -->
+                <fieldset class="space-y-4 border-0 p-0">
+                    <legend class="text-lg font-semibold text-forest mb-4">2. Your primary financial goal is:</legend>
+                    <div class="space-y-3" role="radiogroup" aria-labelledby="q2-label">
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition">
+                            <input type="radio" name="q2" value="aggressive" class="w-4 h-4" required>
+                            <span class="group-hover:text-forest transition">Maximum wealth</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition">
+                            <input type="radio" name="q2" value="balanced" class="w-4 h-4">
+                            <span class="group-hover:text-forest transition">Freedom and flexibility</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition">
+                            <input type="radio" name="q2" value="conservative" class="w-4 h-4">
+                            <span class="group-hover:text-forest transition">Absolute safety</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Question 3 -->
+                <fieldset class="space-y-4 border-0 p-0">
+                    <legend class="text-lg font-semibold text-forest mb-4">3. When you get a bonus, you usually:</legend>
+                    <div class="space-y-3" role="radiogroup" aria-labelledby="q3-label">
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition">
+                            <input type="radio" name="q3" value="aggressive" class="w-4 h-4" required>
+                            <span class="group-hover:text-forest transition">Invest it</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition">
+                            <input type="radio" name="q3" value="balanced" class="w-4 h-4">
+                            <span class="group-hover:text-forest transition">Split it between fun and savings</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer group p-2 rounded-lg hover:bg-sage/30 transition">
+                            <input type="radio" name="q3" value="conservative" class="w-4 h-4">
+                            <span class="group-hover:text-forest transition">Upgrade your lifestyle</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Action Button -->
+                <div class="pt-6">
+                    <button type="submit" class="btn-forest w-full md:w-auto px-8 py-4 rounded-lg font-semibold shadow-lg hover:bg-opacity-90 transition" aria-label="Reveal your money personality type">
+                        Reveal My Vibe
+                    </button>
+                </div>
+            </form>
+
+            <!-- Result (Hidden by default) -->
+            <div id="quiz-result" class="hidden mt-10 p-6 bg-sage/50 border border-forest/20 rounded-xl text-center" role="alert" aria-live="polite">
+                <p class="text-xl text-forest leading-relaxed">
+                    Based on your answers, your Money Vibe is:<br>
+                    <span id="result-title" class="font-bold text-2xl block mt-2"></span>
+                    <span id="result-description" class="text-gray-600 mt-2 block"></span>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById('quiz-form');
+        const resultDiv = document.getElementById('quiz-result');
+        const resultTitle = document.getElementById('result-title');
+        const resultDescription = document.getElementById('result-description');
+
+        // Quiz result profiles
+        const profiles = {
+            aggressive: {
+                title: 'The Aggressive Investor',
+                description: 'You seek maximum growth and are comfortable with volatility. Focus on balancing risk with diversification.'
+            },
+            balanced: {
+                title: 'The Balanced Navigator',
+                description: 'You prioritize long-term peace over short-term thrills. Your steady approach builds lasting wealth.'
+            },
+            conservative: {
+                title: 'The Steady Protector',
+                description: 'You value security and stability. Consider low-risk index funds to grow wealth safely.'
+            }
+        };
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Collect answers
+            const formData = new FormData(form);
+            const answers = {
+                q1: formData.get('q1'),
+                q2: formData.get('q2'),
+                q3: formData.get('q3')
+            };
+
+            // Calculate dominant profile
+            const counts = {};
+            Object.values(answers).forEach(answer => {
+                counts[answer] = (counts[answer] || 0) + 1;
+            });
+
+            const dominantType = Object.entries(counts)
+                .sort((a, b) => b[1] - a[1])[0][0];
+
+            const profile = profiles[dominantType];
+
+            // Display result
+            resultTitle.textContent = profile.title;
+            resultDescription.textContent = profile.description;
+            resultDiv.classList.remove('hidden');
+            resultDiv.classList.add('animate-fade-in');
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+
+    <script src="nav.js"></script>
+</body>
+</html>

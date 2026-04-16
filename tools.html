@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Financial Independence Tools | Freedom Calculator | Mindful Money</title>
+    <meta name="description" content="Calculate your financial independence runway. Discover how many years of freedom your current wealth can provide based on your expenses.">
+    <meta name="keywords" content="financial independence calculator, FIRE calculator, freedom calculator, financial runway, wealth tools">
+    <meta name="author" content="Mindful Money">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Financial Independence Tools | Mindful Money">
+    <meta property="og:description" content="Calculate your financial runway with our Freedom Calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindfulmoney.com/tools.html">
+    <meta property="og:image" content="./og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Financial Independence Tools | Mindful Money">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Freedom Calculator",
+        "description": "Calculate your financial independence runway",
+        "applicationCategory": "FinanceApplication"
+    }
+    </script>
+</head>
+<body class="bg-sage text-gray-800 min-h-screen">
+
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Universal Navigation -->
+    <nav id="main-nav" class="p-6 flex justify-between items-center max-w-6xl mx-auto w-full" role="banner" aria-label="Site navigation">
+        <!-- Navigation injected by nav.js -->
+    </nav>
+
+    <!-- Header Section -->
+    <header class="max-w-4xl mx-auto text-center py-16 px-6">
+        <h1 class="text-5xl md:text-6xl text-forest mb-4 leading-tight">
+            Financial Independence Tools
+        </h1>
+        <p class="text-xl text-gray-600">
+            Precision instruments for a mindful financial life.
+        </p>
+    </header>
+
+    <!-- Freedom Calculator Section -->
+    <main id="main-content" class="max-w-6xl mx-auto pb-24 px-6">
+        <div class="bg-white/80 backdrop-blur-md p-10 md:p-16 rounded-3xl border border-white/50 shadow-xl max-w-4xl mx-auto text-center" aria-labelledby="calculator-heading">
+
+            <h2 id="calculator-heading" class="text-3xl text-forest mb-12">Freedom Calculator</h2>
+
+            <div class="grid md:grid-cols-2 gap-16 mb-12 text-left">
+                <!-- Monthly Expenses Slider -->
+                <div>
+                    <label for="expenses" class="block text-sm font-semibold text-gray-600 mb-6 flex justify-between">
+                        <span>Monthly Expenses</span>
+                        <span class="text-forest font-bold">£<span id="expenses-val">2500</span></span>
+                    </label>
+                    <input
+                        type="range"
+                        id="expenses"
+                        name="expenses"
+                        min="1000"
+                        max="10000"
+                        step="100"
+                        value="2500"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#2d4a3e]"
+                        aria-valuemin="1000"
+                        aria-valuemax="10000"
+                        aria-valuenow="2500"
+                        aria-label="Adjust monthly expenses"
+                    >
+                </div>
+
+                <!-- Total Wealth Slider -->
+                <div>
+                    <label for="wealth" class="block text-sm font-semibold text-gray-600 mb-6 flex justify-between">
+                        <span>Total Wealth</span>
+                        <span class="text-forest font-bold">£<span id="wealth-val">250,000</span></span>
+                    </label>
+                    <input
+                        type="range"
+                        id="wealth"
+                        name="wealth"
+                        min="0"
+                        max="2000000"
+                        step="10000"
+                        value="250000"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#2d4a3e]"
+                        aria-valuemin="0"
+                        aria-valuemax="2000000"
+                        aria-valuenow="250000"
+                        aria-label="Adjust total wealth"
+                    >
+                </div>
+            </div>
+
+            <!-- Result Display -->
+            <div class="py-10 border-t border-gray-100" role="region" aria-live="polite" aria-label="Calculation results">
+                <p class="text-gray-600 text-lg mb-4">Your Financial Runway</p>
+                <div class="text-6xl md:text-7xl font-bold text-forest" id="freedom-output" aria-label="Years of freedom">
+                    8.3 <span class="text-2xl font-normal opacity-70">Years of Freedom</span>
+                </div>
+                <p class="mt-6 text-sm text-gray-500 italic">
+                    Calculated as total wealth divided by annual living expenses.
+                </p>
+            </div>
+
+            <!-- Contextual Insights -->
+            <div id="insights" class="mt-8 p-6 bg-sage/30 rounded-xl text-left" role="complementary" aria-label="Financial insights">
+                <h3 class="font-semibold text-forest mb-2">💡 Insight</h3>
+                <p id="insight-text" class="text-gray-600 text-sm">
+                    At a 4% withdrawal rate, you could sustainably withdraw £10,000 per year from your wealth.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const expensesSlider = document.getElementById('expenses');
+        const wealthSlider = document.getElementById('wealth');
+        const expensesVal = document.getElementById('expenses-val');
+        const wealthVal = document.getElementById('wealth-val');
+        const output = document.getElementById('freedom-output');
+        const insightText = document.getElementById('insight-text');
+
+        function formatCurrency(value) {
+            return parseInt(value).toLocaleString('en-GB');
+        }
+
+        function calculateFreedom() {
+            const expenses = parseFloat(expensesSlider.value);
+            const wealth = parseFloat(wealthSlider.value);
+
+            // Update display values
+            expensesVal.textContent = formatCurrency(expenses);
+            wealthVal.textContent = formatCurrency(wealth);
+
+            // Update ARIA values
+            expensesSlider.setAttribute('aria-valuenow', expenses);
+            wealthSlider.setAttribute('aria-valuenow', wealth);
+
+            // Calculate years
+            const annualExpenses = expenses * 12;
+            const years = annualExpenses > 0 ? wealth / annualExpenses : 0;
+
+            output.innerHTML = `${years.toFixed(1)} <span class="text-2xl font-normal opacity-70">Years of Freedom</span>`;
+
+            // Calculate 4% rule insight
+            const safeWithdrawal = wealth * 0.04;
+            const monthlySafe = safeWithdrawal / 12;
+            const coverage = monthlySafe >= expenses ? 'covers' : 'covers about ' + Math.round((monthlySafe / expenses) * 100) + '% of';
+
+            insightText.innerHTML = `
+                At a 4% safe withdrawal rate, you could sustainably withdraw
+                <strong>£${formatCurrency(safeWithdrawal)}</strong> per year (about £${formatCurrency(monthlySafe)}/month).
+                This ${coverage} your monthly expenses.
+            `;
+        }
+
+        // Event listeners
+        expensesSlider.addEventListener('input', calculateFreedom);
+        wealthSlider.addEventListener('input', calculateFreedom);
+
+        // Initial calculation
+        calculateFreedom();
+    </script>
+
+    <script src="nav.js"></script>
+</body>
+</html>
